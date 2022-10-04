@@ -1,0 +1,45 @@
+.App {
+    text-align: center;
+  }
+  
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+
+
+
+/* .app{
+    background-image: url('https://www.google.com/imgres?imgurl=https%3A%2F%2Fimg.freepik.com%2Ffree-vector%2Fisometric-people-working-with-technology_52683-19078.jpg%3Fw%3D2000&imgrefurl=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fsoftware-background&tbnid=8Ppiy1uh32YX9M&vet=12ahUKEwjt6OewmPz5AhXaQ_EDHfjzCP4QMygXegUIARCIAg..i&docid=TCppT2UPPBV9fM&w=2000&h=1333&q=background%20image%20for%20website&ved=2ahUKEwjt6OewmPz5AhXaQ_EDHfjzCP4QMygXegUIARCIAg');
+} */
