@@ -3,7 +3,8 @@ import "../myStyles/disp.css";
 import { RiCloseCircleLine } from "react-icons/ri";
 import { TiEdit } from "react-icons/ti";
 
-const DisplayTodo = ({ allTodo }) => {
+
+const DisplayTodo = ({ allTodo, setallTodo}) => {
   const [newTodo, setNewTodo] = useState("");
   const [editedIndex, setEditedIndex] = useState(0);
 
@@ -15,23 +16,28 @@ const DisplayTodo = ({ allTodo }) => {
     setTodoToEdit(todo)
   };
 
-  const updateTodo = ({ allTodo }) => {
-    let updateDetail = [...allTodo];
-    updateDetail[editedIndex] = { newTodo };
+  const updateTodo = (allTodo) => {
+    // let updateDetail = [...allTodo];
+    console.log( allTodo);
+    // updateDetail[editedIndex] = newTodo
     setNewTodo("");
-    allTodo(updateDetail);
+    setallTodo(newTodo);
   };
-
+  
   const deleteTodo=(index)=>{
+    console.log(index);
     let newAllTodo=[...allTodo]
-    let filteredTodo=newAllTodo.filter((todo,ind)=>index!==ind)
-    allTodo(filteredTodo)
-  }
+    newAllTodo.splice(index,1)
+    setallTodo(newAllTodo)
+    
+    // let filteredTodo=newAllTodo.filter((todo,ind)=>index!==ind)
+    // allTodo(newAllTodo)
+  } 
 
   return (
     <>
       <div className="bg">
-        <table>
+        <table className="table" >
           <tr>
             <td>S/N</td>
             <td>Todo</td>
@@ -44,13 +50,14 @@ const DisplayTodo = ({ allTodo }) => {
                 <td>{todo}</td>
                 <td>
                   <div className="d-flex">
+                    {/* Edit Todo */}
                     <TiEdit
                       onClick={() => editTodo(index,todo)}
                       data-bs-toggle="modal"
                       data-bs-target="#exampleModal"
                     />
 
-                    <RiCloseCircleLine onClick={()=>deleteTodo()} />
+                    <RiCloseCircleLine btn onClick={()=>deleteTodo(index)} />
                   </div>
                 </td>
               </tr>
@@ -80,7 +87,7 @@ const DisplayTodo = ({ allTodo }) => {
                     <div class="modal-body">
                       <input
                         type="text"
-                        value={todoToEdit}
+                        placeholder={todoToEdit}
                         className="form-control"
                         onChange={(e) => setNewTodo(e.target.value)}
                       />
@@ -97,7 +104,7 @@ const DisplayTodo = ({ allTodo }) => {
                       <button
                         type="button"
                         class="btn btn-primary"
-                        onClick={updateTodo}
+                        onClick={()=>updateTodo()}
                       >
                         Save changes
                       </button>

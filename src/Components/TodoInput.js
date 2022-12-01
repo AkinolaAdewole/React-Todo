@@ -13,8 +13,9 @@ const TodoInput=({addTodo})=> {
   // 
   return (
     <>
-    {/* <div className='font1'> */}
+   
       <div>
+        
           <div  onSubmit={hSubmit}>
                  <h2>Todo-List</h2>
                <div>

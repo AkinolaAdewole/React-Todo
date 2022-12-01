@@ -21,8 +21,9 @@ function App() {
     <>
     <div className='container'>
       <div className='app-wrapper'>
-           <div><TodoInput addTodo={addTodo}/></div>
-           <div><DisplayTodo allTodo={allTodo}/></div>
+           <TodoInput addTodo={addTodo} />
+           <DisplayTodo allTodo={allTodo} setallTodo={setallTodo}/>
+           
       </div>
     </div>
     
