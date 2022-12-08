@@ -7,7 +7,6 @@ import { TiEdit } from "react-icons/ti";
 const DisplayTodo = ({ allTodo, setallTodo}) => {
   const [newTodo, setNewTodo] = useState("");
   const [editedIndex, setEditedIndex] = useState(0);
-
   const [todoToEdit,setTodoToEdit]=useState("")
 
   const editTodo = (index,todo) => {
@@ -16,10 +15,10 @@ const DisplayTodo = ({ allTodo, setallTodo}) => {
     setTodoToEdit(todo)
   };
 
-  const updateTodo = (allTodo) => {
+  const updateTodo = () => {
     let updateDetail = [...allTodo];
     console.log( allTodo);
-  //  updateDetail[editedIndex] = newTodo
+    newTodo= updateDetail[editedIndex]
     setNewTodo("");
     setallTodo(newTodo);
   };
