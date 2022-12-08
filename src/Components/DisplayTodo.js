@@ -17,15 +17,15 @@ const DisplayTodo = ({ allTodo, setallTodo}) => {
   };
 
   const updateTodo = (allTodo) => {
-    // let updateDetail = [...allTodo];
+    let updateDetail = [...allTodo];
     console.log( allTodo);
-    // updateDetail[editedIndex] = newTodo
+  //  updateDetail[editedIndex] = newTodo
     setNewTodo("");
     setallTodo(newTodo);
   };
   
   const deleteTodo=(index)=>{
-    console.log(index);
+    // console.log(index);
     let newAllTodo=[...allTodo]
     newAllTodo.splice(index,1)
     setallTodo(newAllTodo)
@@ -38,14 +38,14 @@ const DisplayTodo = ({ allTodo, setallTodo}) => {
     <>
       <div className="bg">
         <table className="table" >
-          <tr>
+          <thead>
             <td>S/N</td>
             <td>Todo</td>
             <td>Actions</td>
-          </tr>
+          </thead>
           {allTodo.map((todo, index) => (
             <>
-              <tr>
+              <tr key={index}>
                 <td>{index + 1}</td>
                 <td>{todo}</td>
                 <td>
@@ -63,28 +63,28 @@ const DisplayTodo = ({ allTodo, setallTodo}) => {
               </tr>
 
               <div
-                class="modal fade"
+                className="modal fade"
                 id="exampleModal"
                 tabindex="-1"
                 aria-labelledby="exampleModalLabel"
                 aria-hidden="true"
               >
-                <div class="modal-dialog">
-                  <div class="modal-content">
+                <div className="modal-dialog">
+                  <div className="modal-content">
                     <div className="modal-header">
                       <h5 className="modal-title" id="exampleModalLabel">
                         Edit Todo
                       </h5>
                       <button
                         type="button"
-                        class="btn-close"
+                        className="btn-close"
                         data-bs-dismiss="modal"
                         aria-label="Close"
                       ></button>
                     </div>
                    
                    
-                    <div class="modal-body">
+                    <div className="modal-body">
                       <input
                         type="text"
                         placeholder={todoToEdit}
@@ -93,17 +93,17 @@ const DisplayTodo = ({ allTodo, setallTodo}) => {
                       />
                     
                     </div>
-                    <div class="modal-footer">
+                    <div className="modal-footer">
                       <button
                         type="button"
-                        class="btn btn-secondary"
+                        className="btn btn-secondary"
                         data-bs-dismiss="modal"
                       >
                         Close
                       </button>
                       <button
                         type="button"
-                        class="btn btn-primary"
+                        className="btn btn-primary"
                         onClick={()=>updateTodo()}
                       >
                         Save changes

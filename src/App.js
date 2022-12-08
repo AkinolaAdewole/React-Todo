@@ -11,7 +11,7 @@ function App() {
   const addTodo=(myTodo)=>{
     
     setallTodo([...allTodo,myTodo])
-   myTodo.preventDefault()
+  //  myTodo.preventDefault()
   }
 
   

@@ -9,6 +9,7 @@ const TodoInput=({addTodo})=> {
   const [todo,setTodo]=useState("")
   const hSubmit=(e)=>{
     e.preventDefault()
+    setTodo("")
   }
   // 
   return (
@@ -19,7 +20,9 @@ const TodoInput=({addTodo})=> {
           <div  onSubmit={hSubmit}>
                  <h2>Todo-List</h2>
                <div>
-                 <input aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" type="text" className="form-control" placeholder='Add a Todo' onChange={(e)=>setTodo(e.target.value)}/>
+                 <input aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" 
+                 type="text" className="form-control" 
+                 placeholder='Add a Todo' onChange={(e)=>setTodo(e.target.value)}/>
                </div> 
                 
                 <div>
