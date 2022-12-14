@@ -18,7 +18,8 @@ const DisplayTodo = ({ allTodo, setallTodo}) => {
   const updateTodo = () => {
     let updateDetail = [...allTodo];
     console.log( allTodo);
-    newTodo= updateDetail[editedIndex]
+    let nTodo= updateDetail[editedIndex]
+    newTodo=[...allTodo,nTodo]
     setNewTodo("");
     setallTodo(newTodo);
   };
