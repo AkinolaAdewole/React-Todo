@@ -8,20 +8,21 @@ const DisplayTodo = ({ allTodo, setallTodo}) => {
   const [newTodo, setNewTodo] = useState("");
   const [editedIndex, setEditedIndex] = useState(0);
   const [todoToEdit,setTodoToEdit]=useState("")
+  const [editedTodo, setEditedTodo]=useState([])
 
   const editTodo = (index,todo) => {
-    setEditedIndex(index);
-
+    setEditedIndex(index)
     setTodoToEdit(todo)
   };
 
-  const updateTodo = () => {
+  const updateTodo = (index) => {
     let updateDetail = [...allTodo];
     console.log( allTodo);
-    let nTodo= updateDetail[editedIndex]
-    newTodo=[...allTodo,nTodo]
+    setEditedIndex(index)
+    newTodo= updateDetail[editedIndex]
+
+    setallTodo(...allTodo,newTodo)
     setNewTodo("");
-    setallTodo(newTodo);
   };
   
   const deleteTodo=(index)=>{
@@ -104,7 +105,7 @@ const DisplayTodo = ({ allTodo, setallTodo}) => {
                       <button
                         type="button"
                         className="btn btn-primary"
-                        onClick={()=>updateTodo()}
+                        onClick={()=>updateTodo(index)}
                       >
                         Save changes
                       </button>
