@@ -16,12 +16,12 @@ const DisplayTodo = ({ allTodo, setallTodo}) => {
   };
 
   const updateTodo = (index) => {
+    let updatedTodo = newTodo
     let updateDetail = [...allTodo];
     console.log( allTodo);
     setEditedIndex(index)
-    newTodo= updateDetail[editedIndex]
-
-    setallTodo(...allTodo,newTodo)
+    updateDetail[editedIndex] = updatedTodo
+      setallTodo(updateDetail)
     setNewTodo("");
   };
   
