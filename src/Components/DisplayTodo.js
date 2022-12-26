@@ -18,7 +18,7 @@ const DisplayTodo = ({ allTodo, setallTodo}) => {
   const updateTodo = (index) => {
     let updatedTodo = newTodo
     let updateDetail = [...allTodo];
-    console.log( allTodo);
+    // console.log( allTodo);
     setEditedIndex(index)
     updateDetail[editedIndex] = updatedTodo
       setallTodo(updateDetail)
@@ -38,30 +38,34 @@ const DisplayTodo = ({ allTodo, setallTodo}) => {
   return (
     <>
       <div className="bg">
-        <table className="table" >
+        <table className="table table-responsive" >
           <thead>
-            <td>S/N</td>
-            <td>Todo</td>
-            <td>Actions</td>
+            <tr>
+                <td>S/N</td>
+                <td>Todo</td>
+                <td>Actions</td>
+            </tr>
           </thead>
           {allTodo.map((todo, index) => (
             <>
-              <tr key={index}>
-                <td>{index + 1}</td>
-                <td>{todo}</td>
-                <td>
-                  <div className="d-flex">
-                    {/* Edit Todo */}
-                    <TiEdit
-                      onClick={() => editTodo(index,todo)}
-                      data-bs-toggle="modal"
-                      data-bs-target="#exampleModal"
-                    />
+             <tbody>
+                  <tr key={index} className='' >
+                    <td>{index + 1}</td>
+                    <td>{todo}</td>
+                    <td>
+                      <div className="d-flex">
+                        {/* Edit Todo */}
+                        <TiEdit
+                          onClick={() => editTodo(index,todo)}
+                          data-bs-toggle="modal"
+                          data-bs-target="#exampleModal"
+                        />
 
-                    <RiCloseCircleLine btn onClick={()=>deleteTodo(index)} />
-                  </div>
-                </td>
-              </tr>
+                        <RiCloseCircleLine btn onClick={()=>deleteTodo(index)} />
+                      </div>
+                    </td>
+                  </tr>
+            </tbody>
 
               <div
                 className="modal fade"
