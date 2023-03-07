@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './myStyles/disp.css';
 import DisplayTodo from './Components/DisplayTodo';
 import Formik from './Components/Formik';
 import TodoInput from './Components/TodoInput';
@@ -19,7 +19,7 @@ function App() {
 
   return (
     <>
-    <div className='container'>
+    <div className='bg'>
       <div className='app-wrapper'>
            <TodoInput addTodo={addTodo} />
            <DisplayTodo allTodo={allTodo} setallTodo={setallTodo}/>

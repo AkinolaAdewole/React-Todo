@@ -1,7 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
 import '../myStyles/style.css'
-import myStyle from '../myStyles/todoinput'
 import '../myStyles/style.css'
 
 

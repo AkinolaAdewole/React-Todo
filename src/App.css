@@ -7,23 +7,7 @@
   pointer-events: none;
 }
 
-.container{
-  min-height: 100vh;
-  background-color: green;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
 
-.app-wrapper{
-  background-color:yellowgreen;
-  min-width: 450px;
-  min-height: 600px;
-  box-sizing: border-box;
-  border-radius: 10px;
-  box-shadow: 3px 5px 4px black;
-  padding: 20px;
-}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
