@@ -38,7 +38,7 @@ const DisplayTodo = ({ allTodo, setallTodo}) => {
   return (
     <>
       <div className="display">
-        <table className="table table-warning table-success table-striped  table-responsive " >
+        <table className="table table-bordered table-success table-responsive table-hover " >
           <thead>
             <tr>
                 <td>S/N</td>
