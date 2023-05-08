@@ -35,7 +35,7 @@ const TodoInput=({addTodo})=> {
                       </div>
                     </div> 
                       
-                      <div className='ps-3'>
+                      <div className='ps-3 pt-2'>
                       <button onClick={()=>addTodo(todo)}>Add a Todo</button>
                       </div>
                   </div>
