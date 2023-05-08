@@ -20,8 +20,8 @@ function App() {
   return (
     <>
     <div className='bg'>
-      <div className=''>
-        <div className=' disp col-9 shadow-sm mx-auto'>
+      <div className='disp'>
+        <div className='shadow-sm mx-auto'>
            <TodoInput addTodo={addTodo} />
            <DisplayTodo allTodo={allTodo} setallTodo={setallTodo}/>
         </div>

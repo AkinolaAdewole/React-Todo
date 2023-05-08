@@ -20,16 +20,22 @@ const TodoInput=({addTodo})=> {
           <div  onSubmit={hSubmit}>
 
             <div className='display'>
-                  <h2>Todo-List</h2>
                     <div>
                       <div className='container-fluid'>
+                        
+                        <div>
+                          <h1>Todo-List</h1>
+                        </div>
+                     
+
+
                             <input aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" 
                             type="text" className="form-control" 
                             placeholder='Add a Todo' onChange={(e)=>setTodo(e.target.value)}/>
                       </div>
                     </div> 
                       
-                      <div>
+                      <div className='ps-3'>
                       <button onClick={()=>addTodo(todo)}>Add a Todo</button>
                       </div>
                   </div>
