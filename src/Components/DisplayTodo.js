@@ -42,7 +42,7 @@ const DisplayTodo = ({ allTodo, setallTodo}) => {
           <thead>
             <tr>
                 <td>S/N</td>
-                <td>Todo</td>
+                <td className="col-9 text-center">Todo</td>
                 <td>Actions</td>
             </tr>
           </thead>
@@ -51,7 +51,7 @@ const DisplayTodo = ({ allTodo, setallTodo}) => {
              <tbody>
                   <tr key={index} className='' >
                     <td>{index + 1}</td>
-                    <td className="colspan-9">{todo}</td>
+                    <td className="col-9 text-center">{todo}</td>
                     <td>
                       <div className="d-flex">
                         {/* Edit Todo */}
